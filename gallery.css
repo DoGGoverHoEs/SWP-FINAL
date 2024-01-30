@@ -56,3 +56,14 @@ a{
 main{
     flex-grow: 1;
 }
+
+main > artical {
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+main > artical > .artical-section {
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
