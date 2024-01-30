@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(20, 20, 20);
+    margin: 0px;
+}
+
+#menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-item {
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Cinzel', serif;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.25rem, 0.5vw, 1rem)0rem;
+    transition: opacity 400ms ease;
+}
+
+#menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+}
+
+#menu-items:hover>.menu-item {
+    opacity: 0.3;
+}
+
+#menu-items>.menu-item:hover {
+    opacity: 1;
+}
+
+#menu-background-pattern {
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(rgba(2255, 255, 255, 0.1)9%, transparent 9%);
+    background-position: 0% 0%;
+    background-size: 12vmin 12vmin;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+#menu-items:hover~#menu-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
+}
+
+#menu>#menu-background-pattern {
+    background-position: 0% calc(-25% * (var(--active-index, 0) * 1.001));
+    transition: background-position 1s ease-in-out, opacity 1s ease,
+        background-size 1s ease;
+}
+
+#menu>#menu-background-image {
+    background-position: center 0%;
+}
