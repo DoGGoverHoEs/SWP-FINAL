@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+}
+.header{
+    background-color: rgb(172, 209, 243);
+    display: flex;
+    align-items: baseline;
+    padding: .5rem;
+    gap: 1rem;
+    height: 7vh;
+    font-size: larger;
+    justify-content: space-around  ;
+}
+.link{
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #777;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+.link:hover{
+    color: black;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown.active > .link,
+ .link:hover{
+color: black;
+}
+
+
+.dropdown-menu{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    background-color: white;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 25px 0 rgba(0, 0, 0, .4);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    pointer-events: none;
+}
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.information-grid{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    gap: 2rem;
+}
+.dropdown-link{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+
+
+.main-content{
+    display: grid;
+    height: 85vh;
+    width: 100%;
+    grid-template-areas: 
+   "a a a a"
+   "b b c c"
+   "d d e e";
+   column-gap: 5px;
+    row-gap: 5px;
+    
+
+text-align: center;
+
+}
+
+
+#article1{
+    grid-area: b;
+    margin-left: 5px;
+}
+#article2{
+    grid-area: c;
+    margin-right: 5px;
+}
+#article3{
+    grid-area: d;
+    margin-left: 5px;
+}
+#article4{
+    grid-area: e;
+    margin-right: 5px;
+}
+.hello{
+    margin: auto;
+    text-align: center;
+    grid-area: a;
+    background-color: azure;
+}
+.article{
+    background-color: rgb(210, 142, 246);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.footer{
+    text-align: center;
+    border: solid 1px white;
+    border-radius: .25rem;
+    background-color: black;
+    color: white;
+}

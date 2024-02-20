@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+    --background-color: rgb(6, 11, 25)
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav>.nav-section {
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    align-items: center;
+    justify-content: center;
+}
+#nav-logo-section{
+    flex-basis: calc(100%/4);
+    justify-content: flex-start;
+}
+#nav-contacts-section{
+    flex-basis: calc(100%/4);
+}
+#nav-social-section{
+flex-basis: calc(100%/4);
+}
+#nav-login-section{
+    flex-basis: calc(100%/4);
+    }
+h1,h2,h3,a,p,span{
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    color: white;
+
+}
+a{
+    text-decoration: none;
+}
+#nav-logo-section > a > i {
+    font-size: 2.5rem;
+}
+main{
+    flex-grow: 1;
+    position: relative;
+}
+
+main > article {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    left: 0px;
+    top: 0px;
+}
+main > article > .article-section {
+    height: 100%;
+  
+    
+}
+main > article > .article-description-section, 
+main > article > .article-nav-section{
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+main > article > .article-title-section, 
+main > article > .article-nav-section{
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
